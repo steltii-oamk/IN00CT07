@@ -7,46 +7,85 @@
     tools:context=".MainActivity">
 
     <Button
+        android:id="@+id/buMin"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="-"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.327"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buSum" />
+
+    <Button
+        android:id="@+id/buDiv"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="/"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.327"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buMul"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/buMul"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="*"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.327"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buMin" />
+
+    <Button
         android:id="@+id/buSum"
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:layout_marginTop="220dp"
         android:text="+"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.327"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/etFirstNum"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
+        android:layout_width="70dp"
+        android:layout_height="45dp"
         android:inputType="numberDecimal"
         android:text="0.0"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buSum"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/buMin"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.501" />
 
     <EditText
         android:id="@+id/etSecondNum"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="0.0"
+        android:layout_width="70dp"
+        android:layout_height="45dp"
         android:inputType="numberDecimal"
+        android:text="0.0"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buSum"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/tvEq"
+        app:layout_constraintStart_toEndOf="@+id/buMin"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.501" />
 
     <TextView
         android:id="@+id/tvEq"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:text="="
-        android:textSize="20sp"
+        android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvResult"
         app:layout_constraintStart_toEndOf="@+id/etSecondNum"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -54,21 +93,11 @@
         android:id="@+id/tvResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="summa"
+        android:text="vastaus"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tvEq"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/buMin"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="8dp"
-        android:text="-"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buSum" />
 </androidx.constraintlayout.widget.ConstraintLayout>
